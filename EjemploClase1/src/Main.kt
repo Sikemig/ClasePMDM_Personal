@@ -1,10 +1,14 @@
 fun main() {
-    val name="Kotlin"
-    var num= 23.0
 
-    println("Hola "+ name)
+    var miCoche = Coche("1010ABC ", "Honda", "SportLine")
 
-    for (i in 1..5){
-        println("i = $i")
-    }
+    miCoche.acabado = "NoSport"
+
+
+    val pp = Persona("Pedro" , 20)
+
+    pp.peso = 101.0
+
+    println("¿Sobrepeso?: ${if (pp.sobrePeso) "SI" else "NO"}")
+    println(pp.sobrePeso)
 }
