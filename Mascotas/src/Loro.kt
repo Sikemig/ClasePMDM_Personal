@@ -13,7 +13,7 @@ class Loro(nombre: String, edad: Int, estado: String, fechaNacimiento: Date,
     }
 
     override fun muestra() {
-        val mensaje: String = "Esta mascota es un perro de nombre $nombre, con $edad años y nacido el $fechaNacimiento " +
+        val mensaje: String = "Esta mascota es un loro de nombre $nombre, con $edad años y nacido el $fechaNacimiento " +
                 "de origen $origen y hablar: $habla"
         println(mensaje)
     }

@@ -31,4 +31,37 @@ class Inventario {
             }
         }
     }
+
+    fun insertarAnimales(animal : Mascota){
+        this.animales.add(animal) // KOTLIN supone que animal NO es null
+        println("${animal.nombre} ha sido insertado en el inventario")
+    }
+
+
+    fun eliminarAnimales(nombre: String){
+        val animal = animales.find{it.nombre == nombre}
+
+        if (animal != null){
+            this.animales.remove(animal)
+            println("${animal.nombre} ha sido eliminado en el invetario")
+        } else{
+            println("No se ha encontrado el animal en el inventario")
+        }
+    }
+
+    fun eliminarAnimales(nombre: String, tipo: String){
+        val animal = animales.find{it.nombre == nombre && it::class.simpleName == tipo}
+
+        if (animal != null){
+            this.animales.remove(animal)
+            println("${animal.nombre} ha sido eliminado en el invetario")
+        } else{
+            println("No se ha encontrado el animal en el inventario")
+        }
+    }
+
+    fun vaciarInventario(){
+        animales.clear()
+        println("Se ha vaciado el listado de animales")
+    }
 }

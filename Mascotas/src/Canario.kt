@@ -14,7 +14,7 @@ class Canario (nombre: String, edad: Int, estado: String, fechaNacimiento: Date,
     }
 
     override fun muestra() {
-        val mensaje: String = "Esta mascota es un perro de nombre $nombre, con $edad años y nacido el $fechaNacimiento " +
+        val mensaje: String = "Esta mascota es un canario de nombre $nombre, con $edad años y nacido el $fechaNacimiento " +
                 "de color $color y canta: $canta"
         println(mensaje)
     }
